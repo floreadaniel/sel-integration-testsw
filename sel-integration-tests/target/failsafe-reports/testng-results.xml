@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[<p>Test pic<p><img src="C:\WORK\Brownbag\automated-testing-with-selenium-grid-and-jenkins\report\Screenshots\testPageObject.png"></br>]]>
+    </line>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="8224" started-at="2017-06-24T20:59:44Z" finished-at="2017-06-24T20:59:52Z">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="8224" started-at="2017-06-24T20:59:44Z" finished-at="2017-06-24T20:59:52Z">
+      <class name="com.sel.tests.MyTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.sel.tests.MyTest@26ba2a48]" name="setUp" is-config="true" duration-ms="10770" started-at="2017-06-24T23:59:33Z" finished-at="2017-06-24T23:59:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testPageObject()[pri:0, instance:com.sel.tests.MyTest@26ba2a48]" name="testPageObject" duration-ms="4328" started-at="2017-06-24T23:59:44Z" finished-at="2017-06-24T23:59:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPageObject -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.sel.tests.MyTest@26ba2a48]" name="tearDown" is-config="true" duration-ms="3868" started-at="2017-06-24T23:59:49Z" finished-at="2017-06-24T23:59:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testPageObject status=SUCCESS method=MyTest.testPageObject()[pri:0, instance:com.sel.tests.MyTest@26ba2a48] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[<p>Test pic<p><img src="C:\WORK\Brownbag\automated-testing-with-selenium-grid-and-jenkins\report\Screenshots\testPageObject.png"></br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.sel.tests.MyTest@26ba2a48]" name="tearDown" is-config="true" duration-ms="1" started-at="2017-06-24T23:59:52Z" finished-at="2017-06-24T23:59:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.sel.tests.MyTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

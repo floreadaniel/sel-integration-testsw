@@ -1,0 +1,8 @@
+com\sel\tests\pageobjects\ChapterFirstPage.class
+com\sel\tests\pageobjects\HomePage.class
+com\sel\tests\utils\TestHelper.class
+com\sel\tests\utils\TestHelper$Step.class
+com\sel\tests\pageobjects\SignInPage.class
+com\sel\tests\pageobjects\ChapterSecondPage.class
+com\sel\tests\TestBase.class
+com\sel\tests\MyTest.class
