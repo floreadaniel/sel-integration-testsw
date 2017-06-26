@@ -1,6 +1,7 @@
 .classpath
 .metadata/
 target/
+sel-integration-tests/target/
 .recommenders/
 .settings/
 .project
