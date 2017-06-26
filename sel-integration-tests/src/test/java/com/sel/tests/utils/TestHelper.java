@@ -13,7 +13,10 @@ import com.relevantcodes.extentreports.ExtentReports;
 public class TestHelper {
 
 	public static final String REPORT_DIR="C:\\WORK\\Brownbag\\automated-testing-with-selenium-grid-and-jenkins\\report\\";
-
+	public static String SELENIUM_HUB_URL = "http://localhost:4444/wd/hub";
+	public static String TARGET_SERVER_URL = "http://book.theautomatedtester.co.uk/";
+	
+	
 	public static class Step {
 		String title;
 		Runnable runnable;

@@ -8,11 +8,12 @@ import com.sel.tests.pageobjects.ChapterSecondPage;
 import com.sel.tests.pageobjects.HomePage;
 import com.sel.tests.utils.TestHelper;
 
-public class MyTest extends AbstractTest {
-	private HomePage homePage;
-	private ChapterSecondPage chapterSecond;
-	private ChapterFirstPage chapterFirstPage;
-
+public class MyTestGrid extends AbstractTest{
+	
+	protected HomePage homePage;
+	protected ChapterSecondPage chapterSecond;
+	protected ChapterFirstPage chapterFirstPage;
+	
 	@Test
 	public void testPageObject() throws Exception {
 		
