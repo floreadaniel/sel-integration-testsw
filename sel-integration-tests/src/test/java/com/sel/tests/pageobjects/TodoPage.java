@@ -5,6 +5,7 @@ import java.util.List;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
 public class TodoPage {
@@ -25,8 +26,14 @@ public class TodoPage {
 	@FindBy(xpath="//strong[@class='ng-binding']")
 	WebElement items;
 	
-	@FindBy(xpath="//button[@class='destroy']")
-	List<WebElement> deleteButtons;
+	@FindBy(xpath="//*[@id='todo-list']/li[1]/div/button")
+	WebElement delete;
+	
+	@FindBy(xpath="//*[@id='todo-list']/li[1]/div/input")
+	WebElement complete;
+	
+	@FindBy(xpath="//a[text() = 'Completed']")
+	WebElement completed;
 	
     public void setTodo(String todo) {
 		if (this.todo.isDisplayed()) {
@@ -39,10 +46,18 @@ public class TodoPage {
 		return items.getText();
 	}
 	
-	public void deleteAll() {
-		for (WebElement deleteButton : deleteButtons) {
-			deleteButton.click();
-		}
+	public void deleteFirst() {
+		new Actions(driver).moveToElement(delete);
+		delete.click();
+	}
+	
+	public void completeFirst() {
+		new Actions(driver).moveToElement(complete);
+		complete.click();
+	}
+	
+	public void showCompleted() {
+		completed.click();
 	}
 	
 	public boolean checkFilters() {

@@ -21,6 +21,7 @@ public class TestHelper {
 	public static final String TARGET_SERVER_URL = "http://book.theautomatedtester.co.uk/";
 	public static final String TODO_TARGET_SERVER_URL= "http://todomvc.com/examples/angularjs/#/";
 	public static final String GMAIL_SERVER_URL = "http://mail.google.com";
+	public static final String WTA_SERVER_URL = "http://www.wtatennis.com/";
 	
 	public static class Step {
 		String title;

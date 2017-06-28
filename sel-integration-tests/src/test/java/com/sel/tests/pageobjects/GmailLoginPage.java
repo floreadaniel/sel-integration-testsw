@@ -31,8 +31,8 @@ private WebDriver driver;
 	
 	public void setPassword(String pass) {
 		WebDriverWait wait = new WebDriverWait(driver, 20);
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.name("password"))); 
-        driver.findElement(By.name("password")).sendKeys(pass);
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("password"))); 
+        driver.findElement(By.id("password")).sendKeys(pass);
 	}
 	
 	public GmailAccount login() {

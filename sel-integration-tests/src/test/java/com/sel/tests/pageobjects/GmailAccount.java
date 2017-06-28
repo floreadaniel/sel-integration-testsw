@@ -15,7 +15,7 @@ public class GmailAccount {
 		this.driver = driver;
 	}
 	
-	@FindBy(xpath="//a[@text=Sent Mail]")
+	@FindBy(xpath="//a[text() = 'Sent Mail']")
 	private WebElement sentLink;
 	
 	@FindBy(xpath="//*[@id=':99']/div/div")
