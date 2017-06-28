@@ -14,7 +14,7 @@ public class CheckHalepRankTest extends AbstractTest{
 	private WtaPage wta;
 	private WtaRankingPage wtaRanking;
 	
-	@Test(groups={"ignore"})
+	@Test(groups={"uitest"})
 	public void checkHalepRanking() {
 		
 		wta = PageFactory.initElements(driver, WtaPage.class);

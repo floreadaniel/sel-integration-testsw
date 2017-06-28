@@ -15,7 +15,6 @@ public class SendEmailTest extends AbstractTest{
 	
 	@Test(groups={"uitest"})
 	public void testSendEmail() throws Exception {
-		//System.setProperty("webdriver.gecko.driver", "C:\\WORK\\Brownbag\\utils\\geckodriver.exe");
 		loginPage = PageFactory.initElements(driver, GmailLoginPage.class);
 		driver.get(TestHelper.GMAIL_SERVER_URL);
 		

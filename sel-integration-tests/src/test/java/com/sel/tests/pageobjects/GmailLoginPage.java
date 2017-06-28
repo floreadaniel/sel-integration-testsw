@@ -26,13 +26,14 @@ private WebDriver driver;
 	@FindBy(id="passwordNext")
 	private WebElement login;
 
-	@FindBy(xpath="//*[@id='password']/div[1]/div/div[1]/input")
+	@FindBy(xpath="//*[@id='password']")
 	private WebElement password;
 	
 	public void setPassword(String pass) {
-		WebDriverWait wait = new WebDriverWait(driver, 20);
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("password"))); 
-        driver.findElement(By.id("password")).sendKeys(pass);
+		 WebElement password = driver.findElement(By.xpath("//input[@name='password']"));
+		    WebDriverWait wait = new WebDriverWait(driver, 20);
+		    wait.until(ExpectedConditions.elementToBeClickable(password));
+		    password.sendKeys(pass);
 	}
 	
 	public GmailAccount login() {
