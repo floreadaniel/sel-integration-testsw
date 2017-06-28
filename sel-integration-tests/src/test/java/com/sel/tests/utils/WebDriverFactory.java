@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -35,19 +36,5 @@ public class WebDriverFactory {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		return driver;
-	}
-	
-	private static String getConfigurationProperty(
-			String envKey, String sysKey, String defValue) {
-		String retValue = defValue;
-		String envValue = System.getenv(envKey);
-		String sysValue = System.getProperty(sysKey);
-		// system property prevails over environment variable
-		if (sysValue != null) {
-			retValue = sysValue;
-		} else if (envValue != null) {
-			retValue = envValue;
-		}
-		return retValue;
 	}
 }

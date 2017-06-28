@@ -14,7 +14,7 @@ public class MyTestGrid extends AbstractTest{
 	protected ChapterSecondPage chapterSecond;
 	protected ChapterFirstPage chapterFirstPage;
 	
-	@Test
+	@Test(groups= {"ignore"})
 	public void testPageObject() throws Exception {
 		
 		homePage = PageFactory.initElements(driver, HomePage.class);

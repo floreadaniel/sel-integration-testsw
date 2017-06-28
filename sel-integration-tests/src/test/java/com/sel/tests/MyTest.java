@@ -13,7 +13,7 @@ public class MyTest extends AbstractTest {
 	private ChapterSecondPage chapterSecond;
 	private ChapterFirstPage chapterFirstPage;
 
-	@Test
+	@Test(groups= {"ignore"})
 	public void testPageObject() throws Exception {
 		
 		homePage = PageFactory.initElements(driver, HomePage.class);

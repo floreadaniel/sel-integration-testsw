@@ -5,10 +5,12 @@
 	<artifactId>sel-integration-tests</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<properties>
-		<selenium.version>2.53.0</selenium.version>
+		<selenium.version>3.4.0</selenium.version>
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<maven.selenium.includegroups>uitest</maven.selenium.includegroups>
+		<maven.selenium.excludegroups>ignore</maven.selenium.excludegroups>
 	</properties>
 	<dependencies>
 
@@ -125,9 +127,14 @@
 				<artifactId>maven-failsafe-plugin</artifactId>
 				<version>2.19</version>
 				<configuration>
+					<groups>${maven.selenium.includegroups}</groups>
+					<excludedGroups>${maven.selenium.excludegroups}</excludedGroups>
 					<includes>
 						<include>**/sel/**/*.java</include>
 					</includes>
+					<systemPropertyVariables>
+						<env>${env:local}</env>
+					</systemPropertyVariables>
 				</configuration>
 				<executions>
 					<execution>

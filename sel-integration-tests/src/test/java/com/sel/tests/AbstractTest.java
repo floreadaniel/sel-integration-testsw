@@ -15,12 +15,12 @@ import com.sel.tests.utils.WebDriverFactory;
 
 public abstract class AbstractTest {
 	protected WebDriver driver;
-	private ExtentTest reporter;
+	protected ExtentTest reporter;
 
 	@BeforeMethod(alwaysRun = true)
 	public void setUp(Method method) throws MalformedURLException {
 		reporter = ExtentManager.getInstance().startTest(this.getClass().getName());
-		driver = WebDriverFactory.createDriver(System.getenv("env"));
+		driver = WebDriverFactory.createDriver( System.getProperty("env"));
 		reporter.log(LogStatus.INFO, "Browser started ");
 	}
 
